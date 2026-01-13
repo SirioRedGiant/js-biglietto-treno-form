@@ -17,11 +17,11 @@ btnCalculate.addEventListener("click", function () {
   if (age < 18) {
     // Sconto 20% per minorenni
     totalPrice = totalPrice - totalPrice * 0.2;
-    console.log("sconto riservato ai minorenni (20%)");
+    ticketPriceOffer = "Minor-ticket (20%)";
   } else if (age > 65) {
     // Sconto 40% per over 65
     totalPrice = totalPrice - totalPrice * 0.4;
-    console.log("sconto riservato ai over 65 (40%)");
+    ticketPriceOffer = "Over 65 (40%)";
   } else {
     // Sconto non applicate agli adulti
     console.log("Nessun sconto applicato");
@@ -34,8 +34,9 @@ btnCalculate.addEventListener("click", function () {
   document.getElementById("display-name").innerText = " " + name;
   document.getElementById("display-kilometers").innerText = " " + km + " km";
   document.getElementById("display-provided-offer").innerText =
-    " " + ticketPriceOffer + " €";
-  document.getElementById("display-ticket-price").innerText = " " + totalPrice;
+    " " + ticketPriceOffer;
+  document.getElementById("display-ticket-price").innerText =
+    " " + totalPrice.toFixed(2) + " €";
 
   console.log(
     "Prezzo finale calcolato per " + name + ": €" + totalPrice.toFixed(2)
