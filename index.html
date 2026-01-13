@@ -1,29 +1,38 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Calcolatore Biglietto Treno</title>
-</head>
-<body>
-
+  </head>
+  <body>
     <h1>Calcola il prezzo del biglietto</h1>
 
-    <!-- Input dei chilometri -->
-    <label for="km">Chilometri da percorrere:</label>
-    <input type="number" id="km" placeholder="Inserisci km">
+    <!-- Input dati -->
+    <div class="input-container">
+      <!-- Input nome e cognome utente -->
+      <div>
+        <label for="user-name">Nome e Cognome</label>
+        <input
+          type="text"
+          id="user-name"
+          placeholder="Inserisci il tuo nome e il tuo congnome in quesst'ordine"
+        />
+      </div>
+      <!-- Input km da percorrere -->
+      <div>
+        <label for="km">Chilometri da percorrere:</label>
+        <input type="number" id="km" placeholder="Inserisci km" />
+      </div>
+      <!-- Input età utente -->
+      <div>
+        <label for="age">Età del passeggero:</label>
+        <input type="number" id="age" placeholder="Inserisci età" />
+      </div>
 
-    <br><br>
-
-    <!-- Input età utente -->
-    <label for="age">Età del passeggero:</label>
-    <input type="number" id="age" placeholder="Inserisci età">
-
-    <br><br>
-
-    <!-- Bottone per calcolare il prezzo del biglietto -->
-    <button id="calculate">Calcola Prezzo</button>
-
+      <!-- Bottone per calcolare il prezzo del biglietto -->
+      <button id="calculate">Calcola Prezzo</button>
+    </div>
     <!-- Collegamento a JavaScript -->
-    <script src="script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
