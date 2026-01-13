@@ -3,34 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <title>Calcolatore Biglietto Treno</title>
+    <!-- link allo style CSS -->
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <h1>Calcola il prezzo del biglietto</h1>
+    <!-- Conteiner per il CSS -->
+    <div>
+      <!-- Input dati -->
+      <div class="input-container">
+        <!-- Input nome e cognome utente -->
+        <div class="input-dati">
+          <label for="user-name">Nome e Cognome</label>
+          <input
+            type="text"
+            id="user-name"
+            placeholder="Inserisci il tuo nome e il tuo congnome in quesst'ordine"
+          />
+        </div>
+        <!-- Input km da percorrere -->
+        <div class="imput-dati">
+          <label for="km">Chilometri da percorrere:</label>
+          <input type="number" id="km" placeholder="Inserisci km" />
+        </div>
+        <!-- Input età utente -->
+        <div class="imput dati">
+          <label for="age">Età del passeggero:</label>
+          <input type="number" id="age" placeholder="Inserisci età" />
+        </div>
 
-    <!-- Input dati -->
-    <div class="input-container">
-      <!-- Input nome e cognome utente -->
-      <div>
-        <label for="user-name">Nome e Cognome</label>
-        <input
-          type="text"
-          id="user-name"
-          placeholder="Inserisci il tuo nome e il tuo congnome in quesst'ordine"
-        />
+        <!-- Bottone per calcolare il prezzo del biglietto -->
+        <button id="calculate">Calcola Prezzo</button>
       </div>
-      <!-- Input km da percorrere -->
-      <div>
-        <label for="km">Chilometri da percorrere:</label>
-        <input type="number" id="km" placeholder="Inserisci km" />
-      </div>
-      <!-- Input età utente -->
-      <div>
-        <label for="age">Età del passeggero:</label>
-        <input type="number" id="age" placeholder="Inserisci età" />
-      </div>
-
-      <!-- Bottone per calcolare il prezzo del biglietto -->
-      <button id="calculate">Calcola Prezzo</button>
     </div>
     <div><b>Passeggero</b><span id="display-name"></span></div>
     <div><b>Km da percorrere</b><span id="display-kilometers"></span></div>
