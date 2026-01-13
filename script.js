@@ -7,9 +7,11 @@ btnCalculate.addEventListener("click", function () {
   const km = parseFloat(document.getElementById("km").value);
   const age = parseInt(document.getElementById("age").value);
   const pricePerKm = 0.21;
+  const name = document.getElementById("user-name").value;
 
   //*     2. Calcolo prezzo pieno del biglietto
-  let totalPrice = km * pricePerKm;
+  const totalPrice = km * pricePerKm;
+  const ticketPriceOffer = "biglietto standard";
 
   //^     3. Applicazione sconti in base all'età
   if (age < 18) {
@@ -29,4 +31,13 @@ btnCalculate.addEventListener("click", function () {
   console.log("Chilometri impostati:", km);
   console.log("Età impostata:", age);
   console.log("Prezzo finale: €", totalPrice.toFixed(2));
+  document.getElementById("display-name").innerText = " " + name;
+  document.getElementById("display-kilometers").innerText = " " + km;
+  document.getElementById("display-provided-offer").innerText =
+    " " + ticketPriceOffer;
+  document.getElementById("display-ticket-price").innerText = " " + totalPrice;
+
+  console.log(
+    "Prezzo finale calcolato per " + name + ": €" + totalPrice.toFixed(2)
+  );
 });
