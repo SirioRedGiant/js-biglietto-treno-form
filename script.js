@@ -14,18 +14,16 @@ btnCalculate.addEventListener("click", function () {
   let ticketPriceOffer = "biglietto standard";
 
   //^     3. Applicazione sconti in base all'età
-  if (age < 18) {
+  if (age - bracket === "minor") {
     // Sconto 20% per minorenni
     totalPrice = totalPrice - totalPrice * 0.2;
     ticketPriceOffer = "Minor-ticket (20%)";
-  } else if (age > 65) {
+  } else if (age - bracket > "senior") {
     // Sconto 40% per over 65
     totalPrice = totalPrice - totalPrice * 0.4;
     ticketPriceOffer = "Over 65 (40%)";
-  } else {
-    // Sconto non applicate agli adulti
-    console.log("Nessun sconto applicato");
   }
+  // Sconto non applicate agli adulti
 
   //!     4. Output finale in console con 2 decimali
   console.log("Chilometri impostati:", km);

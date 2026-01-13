@@ -9,7 +9,7 @@
   <body>
     <h1>Calcola il prezzo del biglietto</h1>
     <!-- Conteiner per il CSS -->
-    <div>
+    <div class = "Container">
       <!-- Input dati -->
       <div class="input-container">
         <!-- Input nome e cognome utente -->
@@ -28,10 +28,16 @@
         </div>
         <!-- Input età utente -->
         <div class="imput dati">
-          <label for="age">Età del passeggero:</label>
-          <input type="number" id="age" placeholder="Inserisci età" />
+          <label for="age-bracket">Età del passeggero:</label>
+          <select name="age-bracket" id="age-bracket">
+            <option value="adult">Maggiorenne</option>
+            <option value="minor">Minorenne</option>
+            <option value="senior">Over 65</option>
+          </select>
         </div>
-
+      </div>
+      <!-- classe bottone -->
+      <div class="button">
         <!-- Bottone per calcolare il prezzo del biglietto -->
         <button id="calculate">Calcola Prezzo</button>
       </div>
