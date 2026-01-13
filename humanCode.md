@@ -40,6 +40,6 @@
 ## Esempio pratico di ragionamento:
 
 - Input: 100km, 17 anni.
-- Prezzo base: 100 \* 0.21 = 21€
-- Sconto (Minorenne): 21 \* 0.20 = 4.20€
+- Prezzo base: 100 * 0.21 = 21€
+- Sconto (Minorenne): 21 * 0.20 = 4.20€
 - Totale: 21 - 4.20 = 16.80€

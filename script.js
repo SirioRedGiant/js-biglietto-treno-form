@@ -4,14 +4,14 @@ const btnCalculate = document.getElementById("calculate");
 //note Resto in ascolto del click sul bottone
 btnCalculate.addEventListener("click", function () {
   //note     1. Raccolta dati dagli input
+  const name = document.getElementById("user-name").value;
   const km = parseFloat(document.getElementById("km").value);
   const age = parseInt(document.getElementById("age").value);
   const pricePerKm = 0.21;
-  const name = document.getElementById("user-name").value;
 
   //*     2. Calcolo prezzo pieno del biglietto
-  const totalPrice = km * pricePerKm;
-  const ticketPriceOffer = "biglietto standard";
+  let totalPrice = km * pricePerKm;
+  let ticketPriceOffer = "biglietto standard";
 
   //^     3. Applicazione sconti in base all'età
   if (age < 18) {
@@ -32,9 +32,9 @@ btnCalculate.addEventListener("click", function () {
   console.log("Età impostata:", age);
   console.log("Prezzo finale: €", totalPrice.toFixed(2));
   document.getElementById("display-name").innerText = " " + name;
-  document.getElementById("display-kilometers").innerText = " " + km;
+  document.getElementById("display-kilometers").innerText = " " + km + " km";
   document.getElementById("display-provided-offer").innerText =
-    " " + ticketPriceOffer;
+    " " + ticketPriceOffer + " €";
   document.getElementById("display-ticket-price").innerText = " " + totalPrice;
 
   console.log(
