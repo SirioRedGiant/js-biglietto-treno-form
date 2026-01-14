@@ -10,6 +10,14 @@ btnCalculate.addEventListener("click", function () {
   const ageBracket = document.getElementById("age-bracket").value;
   const pricePerKm = 0.21;
 
+  // Validazione: controlla che il nome non sia vuoto e i km siano validi
+  if (name === "" || isNaN(km) || km <= 0) {
+    alert(
+      "Per favore, inserisci un nome valido e un numero di chilometri maggiore di 0."
+    );
+    return; // Interrompe l'esecuzione
+  }
+
   //*     2. Calcolo prezzo pieno del biglietto
   let totalPrice = km * pricePerKm;
   let ticketPriceOffer = "biglietto standard";

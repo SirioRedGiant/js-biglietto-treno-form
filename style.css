@@ -1,16 +1,131 @@
 body {
-    font-family: sans-serif;
-    background-color: #ec407a; /* Un rosa acceso come sfondo */
-    color: #333;
-    margin: 0;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  font-family: sans-serif;
+  background-color: #ec407a; /* Un rosa acceso come sfondo */
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1 {
-    color: white;
-    text-align: center;
-    margin-bottom: 20px;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.Container,
+.container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+/* Stile per l'area di input */
+.input-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+.input-dati {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 200px; /* Permette ai campi di adattarsi */
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box; /* Assicura che padding e border siano inclusi nella larghezza */
+}
+
+/* Stile per i bottoni */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-primary {
+  background-color: #ff9800; /* Arancione per il bottone principale */
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #e68900;
+}
+
+.btn-secondary {
+  background-color: #f4f4f4; /* Grigio chiaro per Annulla */
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+.btn-secondary:hover {
+  background-color: #e0e0e0;
+}
+
+/* Stile per l'area del biglietto */
+#ticket-title {
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.ticket-area h2 {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.ticket-details {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.detail-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 150px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.detail-group strong {
+  color: #ec407a; /* Colore rosa per le etichette */
+  font-size: 0.8em;
+  margin-bottom: 5px;
+}
+
+.detail-group span {
+  font-size: 1.1em;
+  font-weight: bold;
 }
