@@ -18,16 +18,20 @@
           <input
             type="text"
             id="user-name"
-            placeholder="Inserisci il tuo nome e il tuo cognome in quest'ordine"
+            placeholder="Inserisci nome e cognome"
           />
         </div>
         <!-- Input km da percorrere -->
         <div class="input-dati">
           <label for="km">Chilometri da percorrere:</label>
-          <input type="number" id="km" placeholder="Inserisci km" />
+          <input
+            type="number"
+            id="km"
+            placeholder="Inserisci km da percorrere"
+          />
         </div>
         <!-- Input età utente -->
-        <div class="input dati">
+        <div class="input-dati">
           <label for="age-bracket">Età del passeggero:</label>
           <select name="age-bracket" id="age-bracket">
             <option value="adult">Maggiorenne</option>
@@ -56,6 +60,15 @@
         <div class="detail-group">
           <strong>Offerta</strong>
           <span id="display-provided-offer"></span>
+        </div>
+        <!-- aggiunta sezione per il numero della carrozza -->
+        <div class="detail-group">
+          <strong>Carrozza</strong>
+          <span id="display-numbCarrozza"></span>
+        </div>
+        <div class="detail-group">
+          <strong>Binario</strong>
+          <span id="display-numbBinario"></span>
         </div>
         <div class="detail-group">
           <strong>Costo biglietto</strong>

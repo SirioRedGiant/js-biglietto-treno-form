@@ -26,6 +26,10 @@ btnCalculate.addEventListener("click", function () {
   }
   // Sconto non applicate agli adulti
 
+  //fixed Generatore numero della carrozza e del binario
+  const numbCarrozza = Math.floor(Math.random() * 23) + 1;
+  const numbBinario = Math.floor(Math.random() * 9) + 1;
+
   //!     Stampa in pagina e mostra il biglietto
   document.getElementById("ticket-title").style.display = "block";
   document.getElementById("ticket-area").style.display = "block";
@@ -34,6 +38,8 @@ btnCalculate.addEventListener("click", function () {
   document.getElementById("display-name").innerText = " " + name;
   document.getElementById("display-provided-offer").innerText =
     " " + ticketPriceOffer;
+  document.getElementById("display-numbCarrozza").innerText = numbCarrozza;
+  document.getElementById("display-numbBinario").innerText = numbBinario;
   document.getElementById("display-ticket-price").innerText =
     " " + totalPrice.toFixed(2) + " €";
 });
