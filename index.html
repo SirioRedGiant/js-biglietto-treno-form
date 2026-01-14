@@ -9,7 +9,7 @@
   <body>
     <h1>Calcola il prezzo del biglietto</h1>
     <!-- Conteiner per il CSS -->
-    <div class = "Container">
+    <div class="Container">
       <!-- Input dati -->
       <div class="input-container">
         <!-- Input nome e cognome utente -->
@@ -18,16 +18,16 @@
           <input
             type="text"
             id="user-name"
-            placeholder="Inserisci il tuo nome e il tuo congnome in quesst'ordine"
+            placeholder="Inserisci il tuo nome e il tuo cognome in quest'ordine"
           />
         </div>
         <!-- Input km da percorrere -->
-        <div class="imput-dati">
+        <div class="input-dati">
           <label for="km">Chilometri da percorrere:</label>
           <input type="number" id="km" placeholder="Inserisci km" />
         </div>
         <!-- Input età utente -->
-        <div class="imput dati">
+        <div class="input dati">
           <label for="age-bracket">Età del passeggero:</label>
           <select name="age-bracket" id="age-bracket">
             <option value="adult">Maggiorenne</option>
@@ -36,16 +36,33 @@
           </select>
         </div>
       </div>
-      <!-- classe bottone -->
-      <div class="button">
+      <!-- classe bottoni -->
+      <div class="buttons">
         <!-- Bottone per calcolare il prezzo del biglietto -->
-        <button id="calculate">Calcola Prezzo</button>
+        <button id="calculate" class="btn-primary">Genera il biglietto</button>
+        <button id="reset" class="btn-secondary">Annulla</button>
       </div>
     </div>
-    <div><b>Passeggero</b><span id="display-name"></span></div>
-    <div><b>Km da percorrere</b><span id="display-kilometers"></span></div>
-    <div><b>Sconto</b><span id="display-provided-offer"></span></div>
-    <div><b>Costo del biglietto</b><span id="display-ticket-price"></span></div>
+
+    <!-- Zona biglietta (all'inizio deve essere nascosta) -->
+    <h1 id="ticket-title" style="display: none">IL TUO BIGLIETTO</h1>
+    <div id="ticket-area" class="container ticket-area" style="display: none">
+      <h2>DETTAGLIO PASSEGGERI</h2>
+      <div class="ticket-details">
+        <div class="detail-group">
+          <strong>NOME PASSEGGERO</strong>
+          <span id="display-name"></span>
+        </div>
+        <div class="detail-group">
+          <strong>Offerta</strong>
+          <span id="display-provided-offer"></span>
+        </div>
+        <div class="detail-group">
+          <strong>Costo biglietto</strong>
+          <span id="display-ticket-price"></span>
+        </div>
+      </div>
+    </div>
     <!-- Collegamento a JavaScript -->
     <script src="./script.js"></script>
   </body>
